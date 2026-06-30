@@ -1,0 +1,7 @@
+d:\Games & Programs\Steam\steamapps\common\RimWorld\Mods\World Map Preload on Save Load\Assemblies\WorldMapPreloadOnSaveLoad.dll
+d:\Games & Programs\Steam\steamapps\common\RimWorld\Mods\World Map Preload on Save Load\Assemblies\WorldMapPreloadOnSaveLoad.pdb
+d:\Games & Programs\Steam\steamapps\common\RimWorld\Mods\World Map Preload on Save Load\Source\obj\Release\WorldMapPreloadOnSaveLoad.csproj.AssemblyReference.cache
+d:\Games & Programs\Steam\steamapps\common\RimWorld\Mods\World Map Preload on Save Load\Source\obj\Release\WorldMapPreloadOnSaveLoad.GeneratedMSBuildEditorConfig.editorconfig
+d:\Games & Programs\Steam\steamapps\common\RimWorld\Mods\World Map Preload on Save Load\Source\obj\Release\WorldMapPreloadOnSaveLoad.csproj.CoreCompileInputs.cache
+d:\Games & Programs\Steam\steamapps\common\RimWorld\Mods\World Map Preload on Save Load\Source\obj\Release\WorldMapPreloadOnSaveLoad.dll
+d:\Games & Programs\Steam\steamapps\common\RimWorld\Mods\World Map Preload on Save Load\Source\obj\Release\WorldMapPreloadOnSaveLoad.pdb

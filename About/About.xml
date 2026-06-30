@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<packageId>TehDav.WorldMapPreloadOnSaveLoad</packageId>
+	<name>World Map Preload on Save Load</name>
+	<modVersion>1.1</modVersion>
+	<author>TeH_Dav</author>
+	<description>Regenerates world map render meshes during save loading instead of on the first world-tab click.
+
+On heavy mod lists, opening the world map for the first time after loading can take many minutes while vanilla builds planet draw layers ("Generating planet"). This mod runs that same work as a chained loading step when a save finishes loading, so the first world-tab click is responsive afterward.
+
+Total load time is about the same; the wait moves into the loading screen.
+
+Options (Mod settings):
+• Preload world map after save load (default on)
+• Surface planet layer only — skip Odyssey orbit/space layers if you never use them
+• Warm world update pass — one WorldUpdate in planet mode after mesh regen
+• Defer warm pass — run WorldUpdate after the first playable tick instead of during load (heavy lists)
+• Progress bar and layer detail text during the Generating planet step</description>
+	<supportedVersions>
+		<li>1.5</li>
+		<li>1.6</li>
+	</supportedVersions>
+</ModMetaData>
