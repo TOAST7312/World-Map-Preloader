@@ -18,16 +18,7 @@
         <HintPath>$(RimWorldManagedRoot)\Managed $(RimWorldVersion)\Assembly-CSharp.dll</HintPath>
         <Private>false</Private>
       </Reference>
-      <Reference Include="UnityEngine.CoreModule">
-        <HintPath>$(RimWorldManagedRoot)\Managed $(RimWorldVersion)\UnityEngine.CoreModule.dll</HintPath>
-        <Private>false</Private>
-      </Reference>
-      <Reference Include="UnityEngine.IMGUIModule">
-        <HintPath>$(RimWorldManagedRoot)\Managed $(RimWorldVersion)\UnityEngine.IMGUIModule.dll</HintPath>
-        <Private>false</Private>
-      </Reference>
-      <Reference Include="UnityEngine.TextRenderingModule">
-        <HintPath>$(RimWorldManagedRoot)\Managed $(RimWorldVersion)\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Reference Include="$(RimWorldManagedRoot)\Managed $(RimWorldVersion)\UnityEngine.*.dll">
         <Private>false</Private>
       </Reference>
       <Reference Include="0Harmony">

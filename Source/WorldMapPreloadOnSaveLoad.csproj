@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework Condition="'$(RimWorldVersion)' == '1.5'">net472</TargetFramework>
-    <TargetFramework Condition="'$(RimWorldVersion)' == '1.6'">net472</TargetFramework>
+    <TargetFramework Condition="'$(RimWorldVersion)' == '1.5'">net48</TargetFramework>
+    <TargetFramework Condition="'$(RimWorldVersion)' == '1.6'">net48</TargetFramework>
     <TargetFramework Condition="'$(RimWorldVersion)' != '1.5' And '$(RimWorldVersion)' != '1.6'">net10.0</TargetFramework>
     <LangVersion>12</LangVersion>
     <Nullable>disable</Nullable>
