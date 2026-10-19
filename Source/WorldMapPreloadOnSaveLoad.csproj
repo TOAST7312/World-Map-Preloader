@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <LangVersion>12</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
     <RootNamespace>WorldMapPreloadOnSaveLoad</RootNamespace>
     <AssemblyName>WorldMapPreloadOnSaveLoad</AssemblyName>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
@@ -10,19 +11,18 @@
     <OutputPath>..\Assemblies\</OutputPath>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
-    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
-    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll" Private="false" PrivateAssets="All" />
-    <Reference Include="..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll" Private="false" PrivateAssets="All" />
-    <Reference Include="..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll" Private="false" PrivateAssets="All" />
-    <Reference Include="..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll" Private="false" PrivateAssets="All" />
-    <Reference Include="0Harmony">
-      <HintPath>..\..\..\..\..\workshop\content\294100\2009463077\1.5\Assemblies\0Harmony.dll</HintPath>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\Assembly-CSharp.dll</HintPath>
       <Private>false</Private>
     </Reference>
-    <Reference Include="System">
+    <Reference Include="UnityStubs">
+      <HintPath>..\..\..\UnityStubs.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\..\workshop\content\294100\2009463077\1.7\Assemblies\0Harmony.dll</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>
