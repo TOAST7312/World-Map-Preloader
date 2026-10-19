@@ -1,0 +1,47 @@
+<Project>
+  <!--
+    Imported from each mod Source folder. Pass -p:RimWorldVersion=1.5|1.6 to compile
+    against that version's Managed assemblies and Harmony. 1.7 keeps the csproj refs.
+  -->
+  <PropertyGroup>
+    <RimWorldManagedRoot>C:\Users\dcbus\Desktop\1 - Rimworld Version DLLs</RimWorldManagedRoot>
+    <RimWorldHarmonyRoot>D:\Games &amp; Programs\Steam\steamapps\workshop\content\294100\2009463077</RimWorldHarmonyRoot>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+  </PropertyGroup>
+
+  <Target Name="UseOlderRimWorldRefs" BeforeTargets="ResolveAssemblyReferences" Condition="'$(RimWorldVersion)' == '1.5' Or '$(RimWorldVersion)' == '1.6'">
+    <ItemGroup>
+      <Reference Remove="@(Reference)" Condition="$([System.String]::Copy('%(Identity)').Contains('Assembly-CSharp')) Or $([System.String]::Copy('%(Identity)').Contains('UnityStubs')) Or $([System.String]::Copy('%(Identity)').Contains('0Harmony')) Or $([System.String]::Copy('%(Identity)').Contains('UnityEngine.'))" />
+    </ItemGroup>
+    <ItemGroup>
+      <Reference Include="Assembly-CSharp">
+        <HintPath>$(RimWorldManagedRoot)\Managed $(RimWorldVersion)\Assembly-CSharp.dll</HintPath>
+        <Private>false</Private>
+      </Reference>
+      <Reference Include="UnityEngine.CoreModule">
+        <HintPath>$(RimWorldManagedRoot)\Managed $(RimWorldVersion)\UnityEngine.CoreModule.dll</HintPath>
+        <Private>false</Private>
+      </Reference>
+      <Reference Include="UnityEngine.IMGUIModule">
+        <HintPath>$(RimWorldManagedRoot)\Managed $(RimWorldVersion)\UnityEngine.IMGUIModule.dll</HintPath>
+        <Private>false</Private>
+      </Reference>
+      <Reference Include="UnityEngine.TextRenderingModule">
+        <HintPath>$(RimWorldManagedRoot)\Managed $(RimWorldVersion)\UnityEngine.TextRenderingModule.dll</HintPath>
+        <Private>false</Private>
+      </Reference>
+      <Reference Include="0Harmony">
+        <HintPath>$(RimWorldHarmonyRoot)\$(RimWorldVersion)\Assemblies\0Harmony.dll</HintPath>
+        <Private>false</Private>
+      </Reference>
+    </ItemGroup>
+    <ItemGroup>
+      <_VersionedRef Include="@(Reference)" Condition="'%(Identity)' == 'AlienRace' Or '%(Identity)' == 'RJW' Or '%(Identity)' == 'RJW_Menstruation' Or '%(Identity)' == 'Pawnmorph' Or '%(Identity)' == 'RJWSexperience' Or '%(Identity)' == 'BadHygiene'" />
+      <_VersionedRef>
+        <HintPath>$([System.String]::Copy('%(HintPath)').Replace('\1.7\', '\$(RimWorldVersion)\').Replace('\1.6\', '\$(RimWorldVersion)\'))</HintPath>
+      </_VersionedRef>
+      <Reference Remove="@(_VersionedRef)" />
+      <Reference Include="@(_VersionedRef)" />
+    </ItemGroup>
+  </Target>
+</Project>
